@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="" />
+    <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TS_Forecasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/TS_Forecasting.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Time-series-forecasting" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1a97r8rOddUVCJJUBJ1RET3jlaR" />
@@ -71,10 +75,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586268386634">
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586268612367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268386634" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268612367" />
     <state width="1258" height="277" key="GridCell.Tab.0.bottom" timestamp="1586209316486">
       <screen x="1920" y="0" width="1280" height="984" />
     </state>
@@ -111,17 +115,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="922" height="335" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
-    <state x="463" y="150" key="SettingsEditor" timestamp="1586268395274">
+    <state x="463" y="150" key="SettingsEditor" timestamp="1586268618831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="463" y="150" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268395274" />
+    <state x="463" y="150" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268618831" />
     <state x="667" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1586136157925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="346" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586136157925" />
-    <state x="771" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586268412003">
+    <state x="771" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586268872223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="771" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268412003" />
+    <state x="771" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268872223" />
   </component>
 </project>
