@@ -1,5 +1,6 @@
 from fbprophet import Prophet
 from alpha_vantage.timeseries import TimeSeries
+from fbprophet.plot import add_changepoints_to_plot
 
 def getData():
 
@@ -35,10 +36,13 @@ print(history_close.tail(5))
 model = Prophet(
     #interval_width=0.95,
     growth='logistic',
-    #daily_seasonality=False,
-    #weekly_seasonality=False,
-    #yearly_seasonality=False,
+    daily_seasonality=False,
+    weekly_seasonality=False,
+    yearly_seasonality=False,
     #seasonality_mode='multiplicative'
+    changepoint_range=0.9,
+    n_changepoints= 30,#max nb of potential changepoints(red mark)
+    changepoint_prior_scale= 0.1#felxibility of prediction(default=0.05)
     )
 
 # fit the model to historical data
@@ -46,7 +50,7 @@ model.fit(history_close)
 
 #ask to predict x days in advance
 future_close = model.make_future_dataframe(
-    periods= 365, #predict over 365 days!!
+    periods= 1000, #predict over 1000 days!!
     freq='d',
     include_history=True
 )
@@ -59,6 +63,9 @@ print(forecast_close[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 #Ploting a graph
 predict_fig = model.plot(forecast_close, xlabel='date', ylabel='close')
+#adds potential changepoints, for detecting abrupt change in the datas
+#Could be set manually with Prophet(changepoints=['2014-01-01'])
+add_changepoints_to_plot(predict_fig.gca(), model, forecast_close)
 predict_fig.savefig('img/close.png')
 
 #see the forecast components
