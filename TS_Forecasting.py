@@ -1,19 +1,31 @@
 import pandas as pd
 from fbprophet import Prophet
 
-#read csv file
-full_csv = pd.read_csv('datas/daily_IBM.csv', header = 0)
-print(full_csv.head(5))
+from alpha_vantage.timeseries import TimeSeries
+from alpha_vantage.techindicators import TechIndicators
+
+def getData():
+    # Your key here
+    key = 'KGZW12R6CERW119E'
+    ts = TimeSeries(key, output_format='pandas')
+    #ti = TechIndicators(key)
+
+    # aapl_data is a pandas dataframe, aapl_meta_data is a dict
+    data, dataBase_meta = ts.get_daily(symbol='IBM', outputsize= 'full')
+    return data.reset_index()
+
+data = getData()
+print(data.tail(5))
 
 #Initialize our dataframe
-history_close = full_csv[['timestamp', 'close']]
-history_close = history_close.rename(columns={"timestamp": "ds", "close": "y"})
+history_close = data[['date', '4. close']]
+history_close = history_close.rename(columns={"date": "ds", "4. close": "y"})
 
 #setting the logistic growth
 history_close['cap'] = history_close['y'].max()#full_csv[['high']]
 history_close['floor'] = history_close['y'].min()#full_csv[['low']]
 print("Valeur max de y: " + str(history_close['y'].max()))
-print(history_close.head(5))
+print(history_close.tail(5))
 
 # instantiate the model and set parameters
 model = Prophet(
@@ -52,3 +64,4 @@ predict_fig.savefig('img/close_forcast.png')
 #interactive figure
 #fig = plot_plotly(model, forecast_close)  # This returns a plotly Figure
 #py.iplot(fig)
+
