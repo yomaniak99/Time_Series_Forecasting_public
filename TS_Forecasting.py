@@ -1,29 +1,34 @@
-import pandas as pd
 from fbprophet import Prophet
 
 from alpha_vantage.timeseries import TimeSeries
-from alpha_vantage.techindicators import TechIndicators
 
 def getData():
-    # Your key here
-    key = 'KGZW12R6CERW119E'
-    ts = TimeSeries(key, output_format='pandas')
-    #ti = TechIndicators(key)
 
-    # aapl_data is a pandas dataframe, aapl_meta_data is a dict
-    data, dataBase_meta = ts.get_daily(symbol='IBM', outputsize= 'full')
+    key = 'KGZW12R6CERW119E' # Your key here
+    ts = TimeSeries(key, output_format='pandas')
+
+    # data is a pandas dataframe, meta_data is a dict
+    data, meta_data = ts.get_daily(symbol='IBM', outputsize= 'full')
+
     return data.reset_index()
+
+#Initialize our dataframe
+def setupDataFrame(data):
+
+    #Converting to make compatible with prophet
+    history_close = data[['date', '4. close']]
+    history_close = history_close.rename(columns={"date": "ds", "4. close": "y"})
+
+    # setting the logistic growth
+    history_close['cap'] = history_close['y'].max()
+    history_close['floor'] = history_close['y'].min()
+
+    return history_close
 
 data = getData()
 print(data.tail(5))
 
-#Initialize our dataframe
-history_close = data[['date', '4. close']]
-history_close = history_close.rename(columns={"date": "ds", "4. close": "y"})
-
-#setting the logistic growth
-history_close['cap'] = history_close['y'].max()#full_csv[['high']]
-history_close['floor'] = history_close['y'].min()#full_csv[['low']]
+history_close = setupDataFrame(data)
 print("Valeur max de y: " + str(history_close['y'].max()))
 print(history_close.tail(5))
 
@@ -40,9 +45,9 @@ model = Prophet(
 # fit the model to historical data
 model.fit(history_close)
 
-#ask to predict x days in advance<
+#ask to predict x days in advance
 future_close = model.make_future_dataframe(
-    periods=31, #predict over 31 days!!
+    periods= 365, #predict over 365 days!!
     freq='d',
     include_history=True
 )
@@ -54,7 +59,7 @@ forecast_close = model.predict(future_close)
 print(forecast_close[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 #Ploting a graph
-predict_fig = model.plot(forecast_close, xlabel='date', ylabel='close')
+predict_fig = model.plot(future_close, xlabel='date', ylabel='close')
 predict_fig.savefig('img/close.png')
 
 #see the forecast components
