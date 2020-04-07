@@ -1,5 +1,4 @@
 from fbprophet import Prophet
-
 from alpha_vantage.timeseries import TimeSeries
 
 def getData():
@@ -59,7 +58,7 @@ forecast_close = model.predict(future_close)
 print(forecast_close[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 #Ploting a graph
-predict_fig = model.plot(future_close, xlabel='date', ylabel='close')
+predict_fig = model.plot(forecast_close, xlabel='date', ylabel='close')
 predict_fig.savefig('img/close.png')
 
 #see the forecast components
