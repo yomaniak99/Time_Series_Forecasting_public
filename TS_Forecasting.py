@@ -2,13 +2,13 @@ from fbprophet import Prophet
 from alpha_vantage.timeseries import TimeSeries
 from fbprophet.plot import add_changepoints_to_plot
 
-def getData():
+def getData(symbol):
 
     key = 'KGZW12R6CERW119E' # Your key here
     ts = TimeSeries(key, output_format='pandas')
 
     # data is a pandas dataframe, meta_data is a dict
-    data, meta_data = ts.get_daily(symbol='IBM', outputsize= 'full')
+    data, meta_data = ts.get_daily(symbol=symbol, outputsize= 'full')
 
     return data.reset_index()
 
@@ -25,7 +25,8 @@ def setupDataFrame(data):
 
     return history_close
 
-data = getData()
+Symbol = 'IBM'
+data = getData(Symbol)
 print(data.tail(5))
 
 history_close = setupDataFrame(data)
@@ -63,6 +64,7 @@ print(forecast_close[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 #Ploting a graph
 predict_fig = model.plot(forecast_close, xlabel='date', ylabel='close')
+predict_fig.gca().set_title(Symbol, size=14)
 #adds potential changepoints, for detecting abrupt change in the datas
 #Could be set manually with Prophet(changepoints=['2014-01-01'])
 add_changepoints_to_plot(predict_fig.gca(), model, forecast_close)
