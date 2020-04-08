@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TS_Forecasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/TS_Forecasting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/close_forcast.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/close_forcast.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +111,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586273512773</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout de la section &quot;Trend Changepoints&quot;">
+      <created>1586290040817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586290040817</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,57 +148,58 @@
     <MESSAGE value="Base du projet" />
     <MESSAGE value="ajout de l'API AlphaVantage" />
     <MESSAGE value="Ajout de l'API AlphaVantage - Vrai base du programme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de l'API AlphaVantage - Vrai base du programme" />
+    <MESSAGE value="Ajout de la section &quot;Trend Changepoints&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la section &quot;Trend Changepoints&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1586273520416">
+    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1586290040470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273520416" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586268612367">
+    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586290040470" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586299217510">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268612367" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586299217510" />
     <state x="802" y="417" key="Github.ShareDialog" timestamp="1586271894556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="417" key="Github.ShareDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586271894556" />
-    <state width="1898" height="277" key="GridCell.Tab.0.bottom" timestamp="1586286113195">
+    <state width="922" height="335" key="GridCell.Tab.0.bottom" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586286113195" />
+    <state width="922" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
     <state width="1258" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.center" timestamp="1586286113195">
+    <state width="922" height="335" key="GridCell.Tab.0.center" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586286113195" />
+    <state width="922" height="335" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
     <state width="1258" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.left" timestamp="1586286113195">
+    <state width="922" height="335" key="GridCell.Tab.0.left" timestamp="1586303322126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586286113195" />
+    <state width="922" height="335" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322126" />
     <state width="1258" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.right" timestamp="1586286113195">
+    <state width="922" height="335" key="GridCell.Tab.0.right" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586286113195" />
+    <state width="922" height="335" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
     <state width="1258" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="922" height="335" key="GridCell.Tab.1.bottom" timestamp="1586185404987">
+    <state width="922" height="335" key="GridCell.Tab.1.bottom" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="922" height="335" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
-    <state width="922" height="335" key="GridCell.Tab.1.center" timestamp="1586185404987">
+    <state width="922" height="335" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
+    <state width="922" height="335" key="GridCell.Tab.1.center" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="922" height="335" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
-    <state width="922" height="335" key="GridCell.Tab.1.left" timestamp="1586185404987">
+    <state width="922" height="335" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
+    <state width="922" height="335" key="GridCell.Tab.1.left" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="922" height="335" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
-    <state width="922" height="335" key="GridCell.Tab.1.right" timestamp="1586185404987">
+    <state width="922" height="335" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
+    <state width="922" height="335" key="GridCell.Tab.1.right" timestamp="1586303322127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="922" height="335" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
+    <state width="922" height="335" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586303322127" />
     <state x="672" y="236" key="MultipleFileMergeDialog" timestamp="1586273606125">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -194,10 +208,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="150" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586268618831" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586273562105">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1586290051115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273562105" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586290051115" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586299265359">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586299265359" />
     <state x="667" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1586136157925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
