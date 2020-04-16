@@ -1,6 +1,9 @@
 from fbprophet import Prophet
 from alpha_vantage.timeseries import TimeSeries
 from fbprophet.plot import add_changepoints_to_plot
+import pandas as pd
+
+import time
 
 def getData(symbol):
 
@@ -8,7 +11,7 @@ def getData(symbol):
     ts = TimeSeries(key, output_format='pandas')
 
     # data is a pandas dataframe, meta_data is a dict
-    data, meta_data = ts.get_daily(symbol=symbol, outputsize= 'full')
+    data, meta_data = ts.get_daily(symbol=symbol, outputsize= 'full')#full or compact
 
     return data.reset_index()
 
@@ -23,8 +26,18 @@ def setupDataFrame(data):
     history_close['cap'] = history_close['y'].max()
     history_close['floor'] = history_close['y'].min()
 
+    #Creating custom seasonal change based on stock market observation by humans
+    history_close['high_season'] = history_close['ds'].apply(January_high)
+    history_close['low_season'] = ~history_close['ds'].apply(January_high)
+
     return history_close
 
+def January_high(ds):
+    date = pd.to_datetime(ds)
+    return (date.month >= 1 and date.month <= 3)
+
+
+#Start
 Symbol = 'IBM'
 data = getData(Symbol)
 print(data.tail(5))
@@ -39,12 +52,17 @@ model = Prophet(
     growth='logistic',
     daily_seasonality=False,
     weekly_seasonality=False,
-    yearly_seasonality=False,
-    #seasonality_mode='multiplicative'
+    yearly_seasonality=True,
+    #seasonality_mode='multiplicative',###Maybe????
     changepoint_range=0.9,
     n_changepoints= 30,#max nb of potential changepoints(red mark)
     changepoint_prior_scale= 0.1#felxibility of prediction(default=0.05)
     )
+
+#Adding our own seasonality to the model
+#model.add_seasonality(name='monthly', period=30.5, fourier_order=5) #Adds monthly seasonality
+model.add_seasonality(name='monthly_high_season', period=4, fourier_order=5, condition_name='high_season')
+model.add_seasonality(name='monthly_low_season', period=8, fourier_order=5, condition_name='low_season')
 
 # fit the model to historical data
 model.fit(history_close)
@@ -55,8 +73,11 @@ future_close = model.make_future_dataframe(
     freq='d',
     include_history=True
 )
-future_close['cap'] = history_close['y'].max()#history_close['cap']
-future_close['floor'] = history_close['y'].min()#history_close['floor']
+#Taking our custom modification to the model in consideration in the predicted model
+future_close['cap'] = history_close['y'].max()
+future_close['floor'] = history_close['y'].min()
+future_close['high_season'] = future_close['ds'].apply(January_high)
+future_close['low_season'] = ~future_close['ds'].apply(January_high)
 
 # predict over the dataset
 forecast_close = model.predict(future_close)
@@ -69,6 +90,7 @@ predict_fig.gca().set_title(Symbol, size=14)
 #Could be set manually with Prophet(changepoints=['2014-01-01'])
 add_changepoints_to_plot(predict_fig.gca(), model, forecast_close)
 predict_fig.savefig('img/close.png')
+#predict_fig.show()
 
 #see the forecast components
 fig2 = model.plot_components(forecast_close)
