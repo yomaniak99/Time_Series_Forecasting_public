@@ -54,9 +54,10 @@ model = Prophet(
     weekly_seasonality=False,
     yearly_seasonality=True,
     #seasonality_mode='multiplicative',###Maybe????
+    interval_width=0.85,#default=80%
     changepoint_range=0.9,
     n_changepoints= 30,#max nb of potential changepoints(red mark)
-    changepoint_prior_scale= 0.1#felxibility of prediction(default=0.05)
+    changepoint_prior_scale= 0.1,#felxibility of prediction(default=0.05)
     )
 
 #Adding our own seasonality to the model
