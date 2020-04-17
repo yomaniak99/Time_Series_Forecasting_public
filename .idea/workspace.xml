@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TS_Forecasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/TS_Forecasting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/close_forcast.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/close_forcast.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,17 +19,15 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Yoan_Branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1a97r8rOddUVCJJUBJ1RET3jlaR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -109,13 +103,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base du projet" />
@@ -171,6 +164,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="922" height="335" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586185404987" />
+    <state x="848" y="385" width="507" height="269" key="MultipleFileMergeDialog" timestamp="1587132158218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="848" y="385" width="507" height="269" key="MultipleFileMergeDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587132158218" />
     <state x="463" y="150" key="SettingsEditor" timestamp="1586268618831">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -187,5 +184,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586269098757" />
+    <state x="739" y="231" key="git4idea.branch.GitSmartOperationDialog" timestamp="1587132145667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="231" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587132145667" />
   </component>
 </project>
