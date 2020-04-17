@@ -62,8 +62,8 @@ model = Prophet(
 
 #Adding our own seasonality to the model
 #model.add_seasonality(name='monthly', period=30.5, fourier_order=5) #Adds monthly seasonality
-model.add_seasonality(name='monthly_high_season', period=4, fourier_order=5, condition_name='high_season')
-model.add_seasonality(name='monthly_low_season', period=8, fourier_order=5, condition_name='low_season')
+model.add_seasonality(name='monthly_high_season', period=3, fourier_order=5, condition_name='high_season')
+model.add_seasonality(name='monthly_low_season', period=9, fourier_order=5, condition_name='low_season')
 
 # fit the model to historical data
 model.fit(history_close)
