@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="">
+    <list default="true" id="3f4838a3-cba2-4324-8f4d-f12034927db5" name="Default Changelist" comment="ajout de l'API AlphaVantage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TS_Forecasting.py" beforeDir="false" afterPath="$PROJECT_DIR$/TS_Forecasting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/close_forcast.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,10 +143,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ajout de l'API AlphaVantage" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1586273470607">
+    <state x="612" y="117" key="CommitChangelistDialog2" timestamp="1587132412506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273470607" />
+    <state x="612" y="117" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587132412506" />
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1586268612367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -128,26 +155,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="417" key="Github.ShareDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586271894556" />
-    <state width="1898" height="277" key="GridCell.Tab.0.bottom" timestamp="1586273307704">
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom" timestamp="1587390821069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273307704" />
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587390821069" />
     <state width="1258" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.center" timestamp="1586273307704">
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587172966800" />
+    <state width="1898" height="277" key="GridCell.Tab.0.center" timestamp="1587390821069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273307704" />
+    <state width="1898" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587390821069" />
     <state width="1258" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.left" timestamp="1586273307704">
+    <state width="1898" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587172966800" />
+    <state width="1898" height="277" key="GridCell.Tab.0.left" timestamp="1587390821069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273307704" />
+    <state width="1898" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587390821069" />
     <state width="1258" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
-    <state width="1898" height="277" key="GridCell.Tab.0.right" timestamp="1586273307704">
+    <state width="1898" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587172966800" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right" timestamp="1587390821069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1586273307704" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1587390821069" />
     <state width="1258" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@1920.0.1280.984" timestamp="1586209316486" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587172966800" />
     <state width="922" height="335" key="GridCell.Tab.1.bottom" timestamp="1586185404987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

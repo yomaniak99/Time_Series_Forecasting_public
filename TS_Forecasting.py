@@ -1,6 +1,11 @@
 from fbprophet import Prophet
-from alpha_vantage.timeseries import TimeSeries
 from fbprophet.plot import add_changepoints_to_plot
+from fbprophet.diagnostics import cross_validation
+from fbprophet.diagnostics import performance_metrics
+from fbprophet.plot import plot_cross_validation_metric
+
+from alpha_vantage.timeseries import TimeSeries
+
 import pandas as pd
 
 import time
@@ -33,8 +38,25 @@ def setupDataFrame(data):
     return history_close
 
 def January_high(ds):
+
     date = pd.to_datetime(ds)
     return (date.month >= 1 and date.month <= 3)
+
+def diagnostics(m):
+
+    #prediction performance on a 365 days horizon, starting with 730 days of training data,
+    #and then making predictions every 180 days.    #(3x days, x/2, x days)
+    df_cv = cross_validation(m, initial='4380 days', period='365 days', horizon='1460 days')#15-1-4
+    df_cv.head()
+
+    #used to compute some useful statistics of the prediction performance
+    df_p = performance_metrics(df_cv)
+    df_p.head()
+
+    #ploting a graph
+    fig = plot_cross_validation_metric(df_cv, metric='mape')
+    fig.savefig('img/cross-validation metric.png')
+
 
 
 #Start
@@ -87,15 +109,16 @@ print(forecast_close[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 #Ploting a graph
 predict_fig = model.plot(forecast_close, xlabel='date', ylabel='close')
 predict_fig.gca().set_title(Symbol, size=14)
+
 #adds potential changepoints, for detecting abrupt change in the datas
 #Could be set manually with Prophet(changepoints=['2014-01-01'])
 add_changepoints_to_plot(predict_fig.gca(), model, forecast_close)
 predict_fig.savefig('img/close.png')
-#predict_fig.show()
 
+diagnostics(model)
 #see the forecast components
-fig2 = model.plot_components(forecast_close)
-predict_fig.savefig('img/close_forcast.png')
+#fig2 = model.plot_components(forecast_close)
+#predict_fig.savefig('img/close_forcast.png')
 
 #interactive figure
 #fig = plot_plotly(model, forecast_close)  # This returns a plotly Figure
